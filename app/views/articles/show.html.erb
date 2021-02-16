@@ -1,0 +1,13 @@
+<div id="article-title">
+  <div class="d-flex justify-content-start align-items-center">
+    <h1> <%= @article.title %> </h1>
+    <%= link_to article_path, method: :delete, data: { confirm: "Are you sure you want to delete this article?" } do %>
+    <i class="fas fa-trash-alt fa-2x ml-3 mb-2"></i>
+    <% end %>
+  </div>
+</div>
+
+<p class="mt-1"> <%= @article.content %> </p>
+ <div>
+    <%= link_to 'Edit article', edit_article_path(@article), class: "btn btn-primary"%>
+ </div>
